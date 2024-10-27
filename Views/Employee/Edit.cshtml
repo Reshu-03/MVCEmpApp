@@ -1,0 +1,19 @@
+@model MVCEmp.Data.Employee
+
+<h2>Edit Employee</h2>
+
+<form asp-action="Edit" method="post"  style="background-color: #FFB3DE; padding: 20px; border-radius: 5px;">
+    <div class="form-group">
+        <label for="Id">Employee ID</label>
+        <input type="number" asp-for="Id" class="form-control" readonly /> <!-- ID is read-only -->
+    </div>
+    <div class="form-group">
+        <label for="EmployeeName">Name</label>
+        <input type="text" asp-for="EmployeeName" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="DepartmentNo">Department No</label>
+        <input type="number" asp-for="DepartmentNo" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Update Employee</button>
+</form>
